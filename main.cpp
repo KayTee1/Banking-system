@@ -10,7 +10,7 @@ void deleteAccount(Customer& current, vector<Customer>& customerList);
 void manageAccount(vector<Customer>& customerList, int option);
 
 void addBalance(Customer& current);
-void withdrawl(Customer& current);
+void withdraw(Customer& current);
 
 bool inputValidation(int& target, int low, int high);
 bool passwordValid(string& password);
@@ -183,7 +183,7 @@ void manageAccount(vector<Customer>& customerList, int option){
                         addBalance(elem);
                         break;
                     case 3:
-                        withdrawl(elem);
+                        withdraw(elem);
                         break;
                 }
                 break;
@@ -222,11 +222,11 @@ void addBalance(Customer& current){
     cout << "Your new balance is: " << current.getBalance() << "€ " << endl;
 }
 
-//function to withdrawl balance
-void withdrawl(Customer& current){
+//function to withdraw balance
+void withdraw(Customer& current){
     int amount, currentBalance = current.getBalance();
     do{
-        cout << "\nHow much do you want to withdrawl?\n";
+        cout << "\nHow much do you want to withdraw?\n";
         cin >> amount;
     }while(inputValidation(amount, 1, 1000) == true);
 
