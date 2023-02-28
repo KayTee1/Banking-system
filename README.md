@@ -10,6 +10,7 @@ This project is a simple bank account management system implemented in C++. It a
 # Compiling and Running the program
 
 g++ -o main *.cpp
+
 ./main
 
 # Functions
